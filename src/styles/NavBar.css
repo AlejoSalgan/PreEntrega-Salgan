@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+}
+
+.menuItem {
+  flex: 1;
+  margin-left: center;
+  padding: 10px;
+}
+
+.menuItem:last-child {
+  border-right: none;
+}
+
+.menuItem a {
+  text-decoration: none;
+  color: rgb(197, 122, 31);
+}
+
+.menuItem input {
+  border-radius: 2px;
+  border-style: none;
+  margin-left: 20px;
+}
