@@ -1,21 +1,16 @@
 import "../styles/NavBar.css";
+import Cart from "./cart/Cart";
 
 const NavBar = () => {
   return (
     <div className="menu">
       <div className="menuItem">
-        <a href="#inicio">Inicio</a>
+        <a href="#cabañas">Camperas</a>
       </div>
       <div className="menuItem">
-        <a href="#producto">Productos</a>
+        <a href="#minicasas">Sweter</a>
       </div>
-      <div className="menuItem">
-        <a href="#contacto">Contacto</a>
-      </div>
-      <div className="menuItem">
-        <a href="#buscar">Buscar</a>
-        <input type="text" />
-      </div>
+      <Cart />
     </div>
   );
 };
