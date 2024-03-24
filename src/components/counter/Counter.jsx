@@ -8,7 +8,7 @@ const Counter = () => {
   };
 
   const quitarCarrito = () => {
-    contador > 1
+    contador > 0
       ? funcionContador(contador - 1)
       : alert("No hay productos en el carrito");
   };
