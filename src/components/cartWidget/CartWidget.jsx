@@ -1,7 +1,7 @@
 import { BsCart2 } from "react-icons/bs";
 import Counter from "../counter/Counter";
 
-const Cart = () => {
+const CartWidget = () => {
   return (
     <div>
       <BsCart2 color="peru" size={30} />
@@ -10,4 +10,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default CartWidget;

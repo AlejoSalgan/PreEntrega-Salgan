@@ -1,5 +1,5 @@
 import "../styles/NavBar.css";
-import Cart from "./cart/Cart";
+import CartWidget from "./cartWidget/CartWidget";
 
 const NavBar = () => {
   return (
@@ -10,7 +10,7 @@ const NavBar = () => {
       <div className="menuItem">
         <a href="#minicasas">Sweter</a>
       </div>
-      <Cart />
+      <CartWidget />
     </div>
   );
 };
