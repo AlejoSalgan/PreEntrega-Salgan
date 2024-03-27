@@ -3,15 +3,13 @@ import NavBar from "./components/NavBar.jsx";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.jsx";
 
 const App = () => {
-  const greeting = "Bienvenido a mi Ecommerce";
+  const greeting = "Bienvenido a mi e-commerce";
 
   return (
     <div>
-      <div>
-        <h1>¡Bienvenido a mi aplicación!</h1>
-      </div>
-      <ItemListContainer greeting={greeting} />
+      <div></div>
       <NavBar />
+      <ItemListContainer greeting={greeting} />
     </div>
   );
 };

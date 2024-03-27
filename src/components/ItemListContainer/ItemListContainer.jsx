@@ -1,10 +1,9 @@
 import React from "react";
 
-// Definición del componente ItemListContainer
 const ItemListContainer = ({ greeting }) => {
   return (
     <div>
-      <h1>{greeting}</h1>
+      <h1 style={{ textAlign: "center", color: "peru" }}>{greeting}</h1>
     </div>
   );
 };
