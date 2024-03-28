@@ -10,7 +10,7 @@ body {
 }
 
 .menuItem {
-  padding: 10px;
+  padding: 12px;
 }
 
 .menuItem:last-child {
@@ -19,7 +19,7 @@ body {
 
 .menuItem a {
   flex: 1;
-  margin-left: 340px;
+  margin-left: 180px;
   text-decoration: none;
   color: peru;
 }

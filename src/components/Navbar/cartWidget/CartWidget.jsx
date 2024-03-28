@@ -4,7 +4,7 @@ import Counter from "../counter/Counter";
 const CartWidget = () => {
   return (
     <div>
-      <BsCart2 color="peru" size={30} />
+      <BsCart2 color="peru" size={25} />
       <Counter />
     </div>
   );

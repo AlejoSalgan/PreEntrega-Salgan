@@ -16,7 +16,7 @@ const Counter = () => {
 */
   return (
     <div>
-      <h6>{contador}</h6>
+      <h6 className="contador">{contador}</h6>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "./components/NavBar.jsx";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer.jsx";
+import NavBar from "./components/Navbar/NavBar.jsx";
+import ItemListContainer from "./components/pages/ItemListContainer/ItemListContainer.jsx";
 
 const App = () => {
   const greeting = "Bienvenido a mi e-commerce";
