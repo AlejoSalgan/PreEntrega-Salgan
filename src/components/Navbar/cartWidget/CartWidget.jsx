@@ -1,11 +1,15 @@
 import { BsCart2 } from "react-icons/bs";
-import Counter from "../counter/Counter";
+import Counter from "./counter/Counter";
+import "./cartWidget.css";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
   return (
     <div>
-      <BsCart2 color="peru" size={25} />
-      <Counter />
+      <Link to="/Carrito">
+        <BsCart2 className="carrito" size={28} />
+        <Counter />
+      </Link>
     </div>
   );
 };

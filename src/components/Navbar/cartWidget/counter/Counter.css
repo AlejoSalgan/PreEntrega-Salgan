@@ -1,0 +1,13 @@
+.contador {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  padding-left: 154px;
+  padding-top: 1px;
+}
+
+.burbuja {
+  background-color: rgb(255, 183, 0);
+  margin-left: 150px;
+  padding: 7px;
+  border-radius: 10px;
+}

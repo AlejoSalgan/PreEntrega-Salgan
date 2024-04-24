@@ -13,10 +13,12 @@ const Counter = () => {
       ? funcionContador(contador - 1)
       : alert("No hay productos en el carrito");
   };
-*/
+  */
+
   return (
     <div>
       <h6 className="contador">{contador}</h6>
+      <div className="burbuja"></div>
     </div>
   );
 };
