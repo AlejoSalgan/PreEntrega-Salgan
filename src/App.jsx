@@ -18,7 +18,6 @@ const App = () => {
             <Route path="*" element={<h1>ERROR</h1>} />
           </Route>
         </Routes>
-        <ItemListContainer />
       </BrowserRouter>
     </div>
   );
