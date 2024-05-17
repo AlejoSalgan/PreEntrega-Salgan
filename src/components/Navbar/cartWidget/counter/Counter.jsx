@@ -1,23 +1,13 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "../../../../context/CartContext";
 import "./Counter.css";
 const Counter = () => {
-  const [contador, funcionContador] = useState(0);
-
-  /*
-  const agregarCarrito = () => {
-    funcionContador(contador + 1);
-  };
-
-  const quitarCarrito = () => {
-    contador > 0
-      ? funcionContador(contador - 1)
-      : alert("No hay productos en el carrito");
-  };
-  */
+  const { cart, getTotalItems } = useContext(CartContext);
+  let total = getTotalItems();
 
   return (
     <div>
-      <h6 className="contador">{contador}</h6>
+      <h6 className="contador">{total}</h6>
       <div className="burbuja"></div>
     </div>
   );

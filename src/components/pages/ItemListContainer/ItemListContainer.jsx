@@ -1,32 +1,48 @@
 import React, { useEffect, useState } from "react";
-import { products } from "../../../productMock";
 import ItemList from "./ItemListPresentacional";
 import { useParams } from "react-router-dom";
+import { db } from "../../../firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 export const ItemListContainer = () => {
   const { name } = useParams();
-  console.log(name);
-
   const [items, setItems] = useState([]);
   useEffect(() => {
-    let filteredProducts = products.filter(
-      (product) => product.category === name
-    );
-    const getProducts = new Promise((resolve, reject) => {
-      let variable = true;
-      if (variable) {
-        resolve(name ? filteredProducts : products);
-      } else {
-        reject("salio mal");
-      }
-    });
-
-    getProducts
-      .then((res) => setItems(res))
-      .catch((error) => {
-        console.log(error);
+    /*
+    const productCollection = collection(db, "products");
+    getDocs(productCollection).then((res) => {
+      let newArray = res.docs.map((doc) => {
+        return { id: doc.id, ...doc.data() };
       });
+      setItems(newArray)
+    
+    });
+    */
+    /*
+    const productCollection = collection(db, "products");
+    let consulta = query(productCollection, where("category", "==", name));
+    getDocs(consulta).then((res) => {
+      let newArray = res.docs.map((doc) => {
+        return { id: doc.id, ...doc.data() };
+      });
+      setItems(newArray);
+    });
+    */
+    const productCollection = collection(db, "products");
+    let consulta = productCollection;
+    if (name) {
+      consulta = query(productCollection, where("category", "==", name));
+    }
+    getDocs(consulta).then((res) => {
+      let newArray = res.docs.map((doc) => {
+        return { id: doc.id, ...doc.data() };
+      });
+      setItems(newArray);
+    });
   }, [name]);
+/*
+  
+*/
   return <ItemList items={items} />;
 };
 
